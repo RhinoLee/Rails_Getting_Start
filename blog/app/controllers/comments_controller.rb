@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  http_basic_authenticate_with name: "rhino", password: "pass", except: [:index, :show]
   
   def create 
     # /articles/:article_id/comments
