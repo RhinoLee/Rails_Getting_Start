@@ -9,4 +9,10 @@
   <strong>Comment:</strong>
   <%= comment.body %>
 </p>
+
+<%= link_to 'delete', [comment.article, comment], 
+                      method: 'delete',
+                      data: { confirm: 'Are you sure?' } %>
+
+
 <% end %>
